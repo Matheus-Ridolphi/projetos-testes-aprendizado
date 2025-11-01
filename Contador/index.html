@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-top: 100px; 
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        #contador {
+            display: flex;           
+            justify-content: center; 
+            align-items: center;      
+            gap: 10px;              
+            margin-top: 100px;         
+        }
+
+        #contador button {
+            font-size: 24px; 
+            padding: 10px 20px;
+            margin: 0 5px; 
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        #contador button:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.1);
+        }
+
+        #numeroAtual {
+            display: inline-block;
+            font-size: 28px; 
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>CONTADOR</h1>
+    <p>OBS: Clique no botão com símbolo de menos para subtrair o número e no botão com símbolo de mais para adicionar ao número.</p>
+    <div id="contador">
+        <button  name="subtrair" onclick="subtrair()">-</button>
+        <span id="numeroAtual">0</span>
+        <button id="adicionar">+</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
